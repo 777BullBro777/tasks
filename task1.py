@@ -6,7 +6,6 @@
 # 5. рассчет процентного соотношения.
 import math
 
-
 def factorial(number):
     if number == 0:
         return 1
@@ -16,32 +15,8 @@ def factorial(number):
 if __name__ == '__main__':
     menu = int(input("Введите операцию :\n1)расчёт факториала\n2)возведение в степень"
                         "\n3)модуль\n4)логарифм\n5)расчёт процентоного соотношения"
-                        "\n6)сложение\умножение\вычитание\деление\nВаш выбор :  "))
-    if menu == 6:
-        num1 = float(input("Введите первое  число : "))
-        zna4 = input(str('Введите знак : '))
-        num2 = float(input('Введите второе число : '))
-        if zna4 == str("+"):
-            x = num1 + num2
-            print(x)
-        elif zna4 == str("-"):
-            x = num1 - num2
-            print(x)
-        elif zna4 == str("*"):
-            x = num1 * num2
-            print(x)
-        try:
-            if zna4 == str("/"):
-                x = num1 / num2
-            num1 = float(num1)
-            num2 = float(num2)
-        except ZeroDivisionError:
-            print(ZeroDivisionError, "Деление на ноль!")
-            x = 0
-            print(x)
-        else:
-            print(num1 / num2)
-    elif menu == 1:
+                        "\n6)сложение\умножение\вычитание\деление\n7)Выход\nВаш выбор :  "))
+    if menu == 1:
         number = int(input("Введите число :  "))
         factorial(number)
         print("Ответ :  ", factorial(number))
@@ -80,3 +55,32 @@ if __name__ == '__main__':
             elif number <= 100:
                 array.append(number)
                 print(array)
+    if menu == 6:
+        num1 = float(input("Введите первое  число : "))
+        zna4 = input(str('Введите знак : '))
+        num2 = float(input('Введите второе число : '))
+        if zna4 == str("+"):
+            x = num1 + num2
+            print(x)
+        elif zna4 == str("-"):
+            x = num1 - num2
+            print(x)
+        elif zna4 == str("*"):
+            x = num1 * num2
+            print(x)
+        try:
+            if zna4 == str("/"):
+                x = num1 / num2
+            num1 = float(num1)
+            num2 = float(num2)
+        except ZeroDivisionError:
+            print(ZeroDivisionError, "Деление на ноль!")
+            x = 0
+            print(x)
+        else:
+            print(num1 / num2)
+    elif menu == 7:
+        exit()
+    else:
+        print("Ошибка введённого значения! Выход из программы!")
+        exit()
