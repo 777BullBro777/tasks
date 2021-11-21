@@ -11,6 +11,7 @@ def factorial(number):
         return 1
     else:
         return number * factorial(number - 1)
+
 def degreed(number, degree):
     print("Ответ : ", number ** degree)
 def module(number):
@@ -20,8 +21,10 @@ def module(number):
         print("| ", number, " | =  0")
     elif number < 0:
         print("| ", number, " | =  ", number * (-1))
+
 def log(number, base):
     math.log(number, base)
+
 def procent(array):
     number = None
     kolvo = 0
@@ -42,6 +45,7 @@ def procent(array):
         elif number <= 100:
             array.append(number)
             print(array)
+
 def isfloat(num1, num2):
     try:
         num1(float)
@@ -50,6 +54,7 @@ def isfloat(num1, num2):
     except ValueError:
         print("Ошибка!", ValueError)
         return False
+
 def simple_operation(x):
     num1 = float(input("Введите первое  число : "))
     zna4 = input(str('Введите знак : '))
@@ -75,6 +80,7 @@ def simple_operation(x):
             print(x)
         else:
             print(num1 / num2)
+
 if __name__ == '__main__':
     menu = int(input("Введите операцию :\n1)расчёт факториала\n2)возведение в степень"
                         "\n3)модуль\n4)логарифм\n5)расчёт процентоного соотношения"
