@@ -14,6 +14,7 @@ def factorial(number):
 
 def degreed(number, degree):
     print("Ответ : ", number ** degree)
+
 def module(number):
     if number > 0:
         print("| ", number, " | =  ", number)
